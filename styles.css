@@ -16,6 +16,7 @@ body { background: url("images/background.png");}
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
 
+
 h3 { border-right: .1em solid #d3d3d3;
     width: calc(0.55em * 23);
     white-space: nowrap;
