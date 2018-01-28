@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html class="bg-stripped animated fadeIn" dir=ltr >
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"6387e82dbf","applicationID":"3081130","transactionName":"IV9dR0RcDghRRk4AEBEfQFtZRA==","queueTime":0,"applicationTime":144,"agentToken":null,"agent":"","ttGuid":"6c7e2b8054ac2137"}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>Thomas Beckford - Web Developer</title>
+  <base >
+
+  <meta name="description" content="Curriculum Vitae, Resume, Thomas Beckford">
+  <meta name="author" content="Thomas Beckford">
+  <meta name="robots" content="noindex">
+
+
+  <script src="app/js/vendor/es5-shim.min.js"></script>
+
+  <meta itemprop="image" content="https://workstory.s3.amazonaws.com/assets/1613209/min_cv.png">
+  <meta property="og:image" content="https://workstory.s3.amazonaws.com/assets/1613209/min_cv.png" />
+
+  <link rel="stylesheet" type="text/css" href="app/visualcv.css" />
+</head>
+<body data-cv-id="2683599" class="cv-viewer" >
+
+<br>
+
+
+
+
+  <style type="text/css">@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:700,300|Roboto:300,700&amp;subset=latin,latin-ext,cyrillic);
+body{background: #b6b6b6; }
+ul{list-style-type: none; padding-left: 0}
+
+
+
+.css-crop {
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%;
+  background-repeat: no-repeat;
+}
+.css-crop.bg-cover {
+  background-size: cover;
+  /*-ms-behavior: url("/styles/backgroundsize.min.htc"); doesn't work on IE8-9...*/
+  background-position: center;
+}
+.css-crop.bg-contain {
+  background-size: contain;
+  background-position: center;
+}
+.clear-margin {
+  margin: 0;
+  padding: 0;
+}
+.full-width {
+  width: 100%;
+}
+.half-width {
+  width: 50%;
+}
+.clickable {
+  cursor: pointer;
+}
+.inline {
+  display: inline;
+}
+.inline-block {
+  display: inline-block !important;
+}
+.nomargin {
+  margin: 0px !important;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.centered {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.first {
+  margin-top: 0px !important;
+}
+.last {
+  margin-bottom: 0px !important;
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+.mejs-overlay-button {
+  display: none;
+}
+[data-id=new] [data-field=title] {
+  display: none;
+}
+.cv-viewer p {
+  min-height: 1em;
+}
+.cv-viewer .vcv-header {
+  margin: 30px auto;
+  max-width: 1020px;
+  position: relative;
+}
+.cv-viewer .vcv-header #social-share {
+  text-align: right;
+  position: absolute;
+  left: -80px;
+  top: 80px;
+  z-index: 1050;
+  opacity: 0;
+}
+.cv-viewer .vcv-header #social-share .share-button {
+  min-height: 30px;
+}
+.cv-viewer .vcv-header #social-share .share-button.subtle {
+  opacity: 0.75;
+}
+.cv-viewer .vcv-header .banner-top {
+  padding-left: 90px;
+  position: relative;
+  margin-top: -10px;
+  margin-bottom: -30px;
+  z-index: 0;
+  opacity: 0.5;
+  display: inline-block;
+}
+.cv-viewer .vcv-header .banner-top:hover {
+  opacity: 0.8;
+  -webkit-transition-property: transform opacity;
+  -moz-transition-property: transform opacity;
+  transition-property: transform opacity;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.cv-viewer .vcv-logo {
+  height: 40px;
+  display: block;
+  padding: 5px 0;
+}
+.cv-viewer .cv-container article .empty {
+  display: none !important;
+}
+.cv-viewer footer.vcv-footer {
+  margin-top: 100px;
+  color: #333;
+  text-align: center;
+}
+.cv-viewer footer .powered-by {
+  margin-top: 0px;
+}
+.cv-viewer footer .updated-at {
+  opacity: 0.5;
+}
+.cv-fullscreen {
+  position: relative;
+}
+.cv-fullscreen .powered-by a {
+  color: white;
+}
+.cv-fullscreen .vcv-header {
+  display: none;
+}
+.cv-fullscreen .vcv-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  margin-top: 50px;
+}
+.cv-fullscreen .vcv-footer .updated-at {
+  display: block;
+  margin-bottom: 1em;
+  opacity: 0.75;
+}
+.editor-visible {
+  display: none;
+}
+.cv-editor .cv-container {
+  margin: 0px auto 150px auto;
+}
+.cv-editor .cv-container .editor-visible {
+  display: block;
+}
+.cv-container,
+.cv-content {
+  opacity: 1 !important;
+}
+.cv-container {
+  display: block;
+  margin: 0px auto 10px auto;
+  min-height: 500px;
+  padding: 50px 6.5%;
+  max-width: 1020px;
+  background: white;
+  border-radius: 1px;
+  z-index: 10;
+}
+.cv-container .nowrap-list li {
+  white-space: nowrap;
+}
+.cv-container section {
+  position: relative;
+  word-wrap: break-word;
+}
+.cv-container article:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cv-container .main section:first-child .edit-section .sort-up,
+.cv-container .cv-content section:first-child .edit-section .sort-up {
+  display: none;
+}
+.cv-container .main section:last-of-type .edit-section .sort-down,
+.cv-container .cv-content section:last-of-type .edit-section .sort-down {
+  display: none;
+}
+.cv-container #profile .edit-section {
+  display: none;
+}
+.cv-container #references .date-range {
+  display: none !important;
+}
+.cv-container #references .article-body {
+  width: 100%;
+}
+.cv-container svg {
+  overflow: visible;
+}
+.cv-container table {
+  width: 100%;
+}
+.cv-container .morris-hover {
+  display: none !important;
+}
+.cv-container input[type=month] {
+  position: relative;
+  border: none;
+  max-width: 100%;
+  content: attr(placeholder);
+  display: inline-block;
+}
+.cv-container input[type=month]:before {
+  content: attr(placeholder);
+  position: absolute;
+}
+.cv-container .gallery .asset-thumb {
+  display: block;
+}
+.cv-container .asset label.empty {
+  display: block !important;
+}
+.cv-container .btn {
+  margin-bottom: 15px;
+}
+.cv-container .btn i.subtle {
+  opacity: 0.2;
+}
+.cv-container .btn i {
+  opacity: 0.5;
+}
+.cv-container .btn.btn-glass {
+  background-color: rgba(255, 255, 255, 0.15);
+  -webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.7);
+}
+.cv-container a[href] {
+  color: #428bca;
+}
+.cv-container a[href] [data-bind=organization] {
+  color: #428bca;
+}
+.cv-container [data-bind=organization_url] {
+  display: block;
+}
+.cv-container [data-bind=end_date]:before {
+  content: ' - ';
+}
+.cv-container .add-section {
+  max-width: 850px;
+  margin: 0px auto;
+}
+.cv-container .cv-content:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.cv-container .cv-content .user-thumb {
+  display: none;
+}
+.cv-container .cv-content .user-thumb.visible {
+  display: inherit;
+}
+.cv-container .asset-thumb {
+  position: relative;
+  cursor: pointer;
+  display: block;
+}
+.cv-container .asset-thumb .asset-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 15%;
+  z-index: 100;
+  opacity: 0.5;
+}
+.cv-container .asset-thumb .asset-overlay:hover {
+  opacity: 0.75;
+}
+.cv-container .asset-thumb .asset-overlay.youtube {
+  background-image: url("images/icons/play.png");
+}
+.cv-container .asset-thumb .asset-overlay img {
+  page-break-inside: avoid;
+}
+.cv-container .asset label.ellipsis > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: block;
+}
+@media (max-width: 992px) {
+  #social-share {
+    display: none;
+  }
+  .vcv-header a {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .vcv-header .vcv-logo {
+    display: inline;
+  }
+  .vcv-header .btn {
+    width: 100%;
+  }
+}
+.pdf .cv-container .chart-container {
+  width: 850px;
+}
+.pdf .cv-container .cv-content {
+  padding: 0px;
+}
+.pdf .cv-container .portfolio .css-crop {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.pdf .cv-container .user-thumb {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.pdf body,
+.embed body {
+  background: white !important;
+}
+.pdf .container,
+.embed .container {
+  padding: 0px;
+  margin: 0px auto;
+  width: 100%;
+}
+.pdf .cv-container,
+.embed .cv-container {
+  padding: 0px !important;
+  margin-bottom: 0px !important;
+  max-width: 100% !important;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.pdf .cv-container section:last-of-type,
+.embed .cv-container section:last-of-type,
+.pdf .cv-container section:last-of-type article:last-of-type,
+.embed .cv-container section:last-of-type article:last-of-type,
+.pdf .cv-container section:last-of-type article:last-of-type,
+.embed .cv-container section:last-of-type article:last-of-type,
+.pdf .cv-container p:last-of-type,
+.embed .cv-container p:last-of-type,
+.pdf .cv-container .content-container,
+.embed .cv-container .content-container,
+.pdf .cv-container .cv-content,
+.embed .cv-container .cv-content {
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+.pdf .vcv-header,
+.embed .vcv-header,
+.pdf .vcv-footer,
+.embed .vcv-footer {
+  display: none;
+}
+.pdf header,
+.embed header,
+.pdf .header-text,
+.embed .header-text {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+}
+.pdf .no-page-break,
+.embed .no-page-break,
+.pdf .css-crop,
+.embed .css-crop,
+.pdf pre,
+.embed pre,
+.pdf blockquote,
+.embed blockquote,
+.pdf img,
+.embed img,
+.pdf svg,
+.embed svg,
+.pdf .chart-graph,
+.embed .chart-graph,
+.pdf .chart-container,
+.embed .chart-container,
+.pdf .asset,
+.embed .asset {
+  page-break-inside: avoid;
+}
+.pdf .no-page-break p,
+.embed .no-page-break p {
+  page-break-inside: avoid;
+}
+.pdf .page-break,
+.embed .page-break {
+  page-break-before: always;
+}
+.pdf thead,
+.embed thead {
+  display: table-header-group;
+}
+.pdf p,
+.embed p {
+  orphans: 4;
+  widows: 4;
+}
+@page {
+  size: A4 portrait;
+}
+.cv-container {
+  font-family: "Roboto", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, 华文细黑, STXihei, 黑体, SimHei, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  background: white;
+  padding: 0px;
+}
+.cv-container .cv-content {
+  padding: 3em 0px;
+  margin: 0px;
+  position: relative;
+}
+.cv-container .cv-content:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 33%;
+  height: 100%;
+  background: #425370;
+}
+.cv-container h2,
+.cv-container h3,
+.cv-container h4,
+.cv-container h5,
+.cv-container h6,
+.cv-container label {
+  margin-top: 0px;
+  margin-bottom: 0.2em;
+  font-weight: 300;
+}
+.cv-container h5 {
+  margin: 0 0 0.2em;
+}
+.cv-container h1,
+.cv-container h3 {
+  font-family: "Roboto Condensed", "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, 华文细黑, STXihei, 黑体, SimHei, sans-serif;
+}
+.cv-container h1 {
+  font-size: 225%;
+  margin: 0px;
+  line-height: 1em;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+  margin-bottom: 0.25em;
+}
+.cv-container h2 {
+  font-size: 150%;
+  font-style: italic;
+  text-align: center;
+}
+.cv-container h3 {
+  font-weight: 700;
+  font-size: 150%;
+}
+.cv-container h4,
+.cv-container h5 {
+  font-weight: 400;
+  font-size: 125%;
+}
+.cv-container h5 {
+color:#888888;
+}
+.cv-container h6 {
+  font-size: 125%;
+  color: #555555;
+}
+.cv-container strong {
+  font-weight: 700;
+}
+.cv-container section {
+  clear: both;
+  margin-bottom: 2.5em;
+}
+.cv-container section header {
+  width: 100%;
+  margin-bottom: 2.25em;
+  text-align: left;
+}
+.cv-container section header .header-text {
+  padding: 0px 0.5em 0px 0px;
+  background: white;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  margin: 0em 2px 0px 0px;
+  z-index: 2;
+  position: relative;
+}
+.cv-container section header:after {
+  content: '';
+  display: block;
+  top: 1em;
+  border-bottom: 1px solid #dedede;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 0;
+}
+.cv-container section header {
+  margin-bottom: 1.25em;
+}
+.cv-container .column-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.cv-container .main {
+  width: 67%;
+}
+.cv-container .sidebar {
+  padding: 0% 3%;
+  width: 33%;
+  color: white;
+  z-index: 1;
+}
+.cv-container .sidebar .header-text {
+  background-color: #425370;
+}
+.cv-container .sidebar article a {
+  color: white;
+}
+.cv-container .sidebar .user-contact li,
+.cv-container .sidebar .user-links li {
+  margin-bottom: 0.75em;
+}
+.cv-container .sidebar .user-title {
+  padding: 15px 0px;
+}
+.cv-container .sidebar .user-thumb {
+  max-width: 50%;
+  margin: 0px auto;
+  border: 1px solid white;
+  padding: 4px;
+  border-radius: 100%;
+  margin-top: 1px;
+}
+.cv-container .sidebar .user-thumb .css-crop {
+  padding-bottom: 100%;
+  border-radius: 100%;
+}
+.cv-container .sidebar article.contact_info {
+  margin-bottom: 2em;
+}
+.cv-container .sidebar .margin-top {
+  margin-top: 1.5em;
+}
+.cv-container .sidebar .contact-field {
+  margin-bottom: 1em;
+}
+.cv-container .sidebar .contact-field h4 {
+  margin-bottom: 0px;
+}
+.cv-container .sidebar .competency h6 {
+  color: white;
+}
+.cv-container .sidebar .competency .competency-list {
+  padding: initial;
+}
+.cv-container .sidebar .competency .competency-list li {
+  opacity: 0.2;
+  background-color: white;
+}
+.cv-container .sidebar .competency .competency-list li.filled {
+  opacity: 1;
+}
+.cv-container .vcard ul.user-contact li:before {
+  font-family: FontAwesome;
+  display: inline-block;
+  width: 1em;
+  margin-right: 0.25em;
+}
+.cv-container .vcard li.adr:before {
+  content: "\f041";
+}
+.cv-container .vcard li.phone:before {
+  content: "\f095";
+}
+.cv-container .vcard li.email:before {
+  content: "\f003";
+}
+.cv-container .main {
+  padding: 2em 3%;
+  padding-top: 0px;
+}
+.cv-container .main h3 {
+  color: #555555;
+}
+.cv-container .main .header-text {
+  background-color: white;
+}
+.cv-container #summary header {
+  text-align: center;
+}
+.cv-container #summary header .header-text {
+  padding: 0px 0.5em;
+}
+.cv-container #summary article {
+  margin-top: 0px;
+  text-align: center;
+  padding: 0em 1.5em;
+  font-size: 115%;
+  font-weight: 200;
+}
+.cv-container article {
+  clear: both;
+  margin-bottom: 1.25em;
+}
+.cv-container .dated_story .article-headings {
+  float: left;
+  width: 18%;
+  margin-right: 1%;
+}
+.cv-container .dated_story .article-body {
+  float: left;
+  width: 81%;
+}
+.cv-container .dated_story#references .article-headings {
+  display: none;
+}
+.cv-container .dated_story#references .article-body {
+  width: 100%;
+}
+.cv-container .competency-list {
+  list-style: none;
+  width: 100%;
+  padding-left: 0.25em;
+}
+.cv-container .competency-list li {
+  height: 1em;
+  width: 8%;
+  margin-right: 2%;
+  background-color: #cccccc;
+  -webkit-transform: skewX(-30deg);
+  -ms-transform: skewX(-30deg);
+  -moz-transform-origin: skewX(-30deg);
+  -o-transform-origin: skewX(-30deg);
+  transform: skewX(-30deg);
+  display: inline-block;
+}
+.cv-container .competency-list li.filled {
+  background-color: #425370;
+}
+.cv-container .portfolio .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.cv-container .portfolio .col-sm-4 {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.cv-container .portfolio .asset .asset-description {
+  display: none;
+}
+.cv-container .portfolio label {
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  min-height: 1.5em;
+}
+.cv-container .portfolio .css-crop {
+  width: 100%;
+  padding-bottom: 75%;
+  background-size: cover;
+  background-position: center center;
+  border: 1px solid #425370;
+  -webkit-box-shadow: 1px 1px 3px 0px #cccccc;
+  box-shadow: 1px 1px 3px 0px #cccccc;
+}
+.cv-container .portfolio a label {
+  cursor: pointer;
+}
+.cv-container .sidebar .portfolio .asset {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.cv-container .sidebar .portfolio .css-crop {
+  border: 0px;
+  padding: 0px;
+  height: auto;
+  background-image: none !important;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.cv-container .sidebar .portfolio .css-crop img {
+  display: block !important;
+}
+@media (min-width: 768px) {
+  .cv-container .sidebar .portfolio label {
+    text-align: left;
+  }
+  .cv-container .sidebar .portfolio .asset,
+  .cv-container .sidebar .portfolio .asset-thumb {
+    width: 100%;
+  }
+  .cv-container .sidebar .portfolio .asset-description {
+    display: block;
+  }
+}
+.cv-container .portfolio label {
+  font-weight: initial;
+}
+.cv-container .portfolio .css-crop {
+  width: 100%;
+  padding-bottom: 75%;
+  border: 2px solid #425370;
+  border-radius: 2em 0px 2em 0px;
+  box-shadow: 1px 1px 3px 0px #dedede;
+}
+.cv-container .edit-new {
+  width: 100%;
+  margin-bottom: 0px;
+}
+.cv-container .sidebar .add-section a.btn {
+  color: white;
+}
+@media (max-width: 768px) {
+  .cv-container .cv-content {
+    padding: 0px 0px 3em 0px;
+  }
+  .cv-container .cv-content:before {
+    content: none;
+  }
+  .cv-container #summary article {
+    padding: 0px;
+  }
+  .cv-container .column-container {
+    display: block;
+  }
+  .cv-container .main {
+    padding: 2em 5% !important;
+    width: 100%;
+    display: block;
+  }
+  .cv-container .sidebar {
+    padding: 3em 5% !important;
+    background-color: #425370;
+    float: none;
+    width: 100% !important;
+  }
+  .cv-container article .article-headings,
+  .cv-container article .article-body {
+    width: 100% !important;
+  }
+}
+.pdf body > .container {
+  padding: 0px;
+}
+.pdf .cv-container {
+  margin: 0px;
+}
+.pdf .cv-container .cv-content {
+  padding-top: 1px;
+}
+.pdf .cv-container .header-text:after {
+  padding-right: 0em;
+  content: " \00a0";
+}
+.pdf .cv-container .chart-container {
+  width: 600px !important;
+}
+.pdf .cv-container .main > *:last-child,
+.pdf .cv-container .sidebar > *:last-child {
+  page-break-after: always;
+}
+.pdf .cv-container .main {
+  padding: 0 3%;
+}
+@page {
+  margin: 1.2cm;
+}
+@page :first {
+  margin-top: 0cm;
+}
+</style><div><link rel="stylesheet" type="text/css" href="less/avantbfdb.css?%40primary=%23425370&amp;%40body-font-size=15px&amp;%40section-margins=2.5em&amp;%40article-margins=1.25em"/><div class="cv-container animated fadeIn "><div class="cv-content"><div class="column-container"><div class="sidebar"><section id="profile" class="profile"><article class="vcard " data-bind="content"><div class="user-thumb visible" data-bind="thumb"><div class="css-crop bg-cover" style="background-image:url(min_cv.png);"></div></div><div class="fn user-title"><h1 class="full-name" data-bind="full_name"><span class="undefined needsclick" contenteditable="false" data-placeholder="Full name">THOMAS BECKFORD</span></h1><h2 class="title" data-bind="headline"><span class="undefined needsclick" contenteditable="false" data-placeholder="Headline / current title">Web Developer</span></h2></div><ul class="user-contact"><li class="adr locality" data-bind="location"><span class="undefined needsclick" contenteditable="false" data-placeholder="Location">San isidro, Buenos Aires, Argentina</span></li><li class="phone" data-bind="phone"><span class="undefined needsclick" contenteditable="false" data-placeholder="Phone">+54 1134908167</span></li><li class="email" data-bind="email"><a href="mailto: tebeckford@gmail.com"> tebeckford@gmail.com</a></li></ul><ul class="user-links user-websites" data-bind="websites"><li><a href="http://skype: tebeckford/" target="_blank" rel="nofollow"><i class="fa fa-fw fa-skype"></i> Skype: TEBECKFORD</a></li><li><a href="http://tebeck.com.ar/" target="_blank" rel="nofollow"><i class="fa fa-fw fa-globe"></i> https://tebeck.com.ar</a></li><li><a href="https://github.com/tebeck/" target="_blank" rel="nofollow"><i class="fa fa-fw fa-github"></i> https://github.com/tebeck/</a></li></ul></article></section><section data-bind="sidebar_sections" id="strengths" class="strengths"><header><h3 class="header-text empty" data-bind="label"><span class="undefined needsclick" contenteditable="false" data-placeholder="Skills">Skills</span></h3></header><article class="competency " data-bind="contents"><div class="article-headings"><h6 data-bind="name"><span class="undefined needsclick" contenteditable="false" data-placeholder="Name">HTML5</span></h6></div><div class="article-body competency"><ul class="competency-list"><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class=""></li></ul><div id="react-tinymce-646520" class=" mce-content-body" spellcheck="true" placeholder="Description"><p>Design - Seo</p></div></div><div class="clearfix"></div></article><article class="competency " data-bind="contents"><div class="article-headings"><h6 data-bind="name"><span class="undefined needsclick" contenteditable="false" data-placeholder="Name">CSS3</span></h6></div><div class="article-body competency"><ul class="competency-list"><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class=""></li><li class=""></li></ul><div id="react-tinymce-646522" class=" mce-content-body" spellcheck="true" placeholder="Description"><p>Bootstrap - Materializecss</p>
+<p><span>SASS - Responsive Design</span></p></div></div><div class="clearfix"></div></article><article class="competency " data-bind="contents"><div class="article-headings"><h6 data-bind="name"><span class="undefined needsclick" contenteditable="false" data-placeholder="Name">javaScript</span></h6></div><div class="article-body competency"><ul class="competency-list"><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class=""></li><li class=""></li><li class=""></li><li class=""></li></ul><div id="react-tinymce-646524" class=" mce-content-body" spellcheck="true" placeholder="Description"><p>jQuery</p>
+<p><span>NodeJs(<span>Trainee</span>)</span></p></div></div><div class="clearfix"></div></article><article class="competency " data-bind="contents"><div class="article-headings"><h6 data-bind="name"><span class="undefined needsclick" contenteditable="false" data-placeholder="Name">UNIX SHELL SCRIPTING</span></h6></div><div class="article-body competency"><ul class="competency-list"><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class=""></li><li class=""></li><li class=""></li></ul><div id="react-tinymce-646526" class=" mce-content-body" spellcheck="true" placeholder="Description"><p>Linux Operator</p></div></div><div class="clearfix"></div></article><article class="competency " data-bind="contents"><div class="article-headings"><h6 data-bind="name"><span class="undefined needsclick" contenteditable="false" data-placeholder="Name">SQL</span></h6></div><div class="article-body competency"><ul class="competency-list"><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class="filled"></li><li class=""></li><li class=""></li></ul><div id="react-tinymce-646528" class=" mce-content-body" spellcheck="true" placeholder="Description"><p><span><span>PL/SQL(Oracle) -SqlS<span>erver</span>&nbsp;</span></span></p></div></div><div class="clearfix"></div></article></section><section data-bind="sidebar_sections" id="text_story" class="text_story"><header><h3 class="header-text" data-bind="label"><span class="undefined needsclick" contenteditable="false" data-placeholder="Text section">Idiomas</span></h3></header><article data-bind="content" class=""><div id="react-tinymce-646530" class=" mce-content-body" spellcheck="true" placeholder="Description"><p>Espa&ntilde;ol: Nativo</p>
+<p><span>English: Advanced</span></p></div></article></section><div data-bind="add-sidebar-section-btn"><span class="undefined needsclick" contenteditable="false" data-placeholder="add-sidebar-section-btn"></span></div></div><div class="main"><section data-bind="sections" id="positions" class="dated_story"><header><h3 class="header-text" data-bind="label"><span class="undefined needsclick" contenteditable="false" data-placeholder="Work experience">Experience</span></h3></header><article data-bind="contents" class=""><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2017</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">NOW</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="Job title">Web Developer</span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="Organization">FREELANCE</span></h5></div>Works done:<br> <br><a href="http://hornobar.com">• hornobar.com</a><br><a href="http://hornobar.com">• rolonvalley.com</a></div></article><article data-bind="contents" class=""><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2016</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2017</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="Job title">PL/SQL Analyst Programmer</span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="Organization">CARREFOUR S.A</span></h5></div><div id="react-tinymce-646534" class=" mce-content-body" spellcheck="true" placeholder="Description"><p><span><span></span>&nbsp;</span><br/><span>&bull; Code review and optimization.</span><br/><span>&bull; Monitoring and maintenance of existing projects.</span><br/><span>&bull; 
+Pro-active resolution of area and business problems.</span><br/><span>&bull; Use and management of CRM.</span></p></div></div></article><article data-bind="contents" class=""><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2014</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2016</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="Job title">ETL Data Processing - Ssr Developer</span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="Organization">CITIBANK</span></h5></div><div id="react-tinymce-646536" class=" mce-content-body" spellcheck="true" placeholder="Description"><p><span><span><span>
+Handling large volumes of data by applying top-level logics and imperative programming techniques.</span></span></span></p>
+<p><span>&bull; Development of end-to-end projects.</span><br/><span>&bull; Automation of ETL plans for generating reports.</span><br/><span>&bull; 
+Analysis, estimation and planning of projects.</span><br/><span>&bull; Analysis and diagnosis of inconsistencies.</span><br/><span>&bull; 
+Experience in BI and data warehouse with AB INITIO.</span></p></div></div></article><article data-bind="contents" class=""><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2013</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2014</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="Job title">Application Tester - Trainee</span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="Organization">HOOPLA</span></h5></div><div id="react-tinymce-646538" class=" mce-content-body" spellcheck="true" placeholder="Description"><p><span>
+Analysis and correction of applications created by the group of team developers.<br/></span><br/><span>
+Research on the marks of competence and inquiry about the management in the web environment. Reconciliation of group ideas and preparation of new publications.</span></p></div></div></article></section><section data-bind="sections" id="degrees" class="dated_story"><header><h3 class="header-text" data-bind="label"><span class="undefined needsclick" contenteditable="false" data-placeholder="Education">Educación</span></h3></header><article data-bind="contents" class=""><div class="article-headings"><h6 class="date-range"><span data-bind="start_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2015</span></span><span data-bind="end_date"><span class="undefined needsclick" contenteditable="false" data-placeholder="YYYY">2018</span></span></h6></div><div class="article-body"><h4 data-bind="title"><span class="undefined needsclick" contenteditable="false" data-placeholder="Degree name">
+Senior Technician in Systems Analysis</span></h4><div data-bind="organization_url" target="_blank" rel="nofollow"><h5 data-bind="organization"><span class="undefined needsclick" contenteditable="false" data-placeholder="School name">CITECH (ISIV)</span></h5></div><div id="react-tinymce-646540" class=" mce-content-body" spellcheck="true" placeholder="Description"><p><br/><span>&bull;</span> Currently attending time and form.<br/><span>&bull;</span> 
+Articulation with Computer Engineering</p></div></div></article></section><div data-bind="add-section-btn"><span class="undefined needsclick" contenteditable="false" data-placeholder="add-section-btn"></span></div></div></div></div></div></div>
+<br>
+  <footer style="text-align: center;">
+  <p><time class="updated-at" datetime="2017-08-02T13:16:07-07:00" pubdate="pubdate">2 de Agosto, 2017</time></p>
+</footer>
+
+
+  <link rel="stylesheet" type="text/css" href="../cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+  <script src="../cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+  <script src="../cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <script src="../cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+  <script src="../cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+  <script src="app/js/lib/jquery.cv.js" ></script>
+
+</body>
+
+
+<!-- Mirrored from www.visualcv.com/thomas-beckford by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 02 Aug 2017 20:17:51 GMT -->
+</html>

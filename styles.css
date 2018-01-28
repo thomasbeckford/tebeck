@@ -1,0 +1,63 @@
+*{text-align: center; box-sizing: border-box;color: #F6F6F6; margin: 0 auto; font-family: 'Dosis', serif, Georgia;}
+
+/* MOBILE FIRST :) */
+h1,h2,h3,h5 {font-weight: 800; text-align: center; display: block; color: #e9e9e9; }
+h1,h2 { font-size: 60px; }
+h3,h5 { font-size: 20px;}
+h3:active {transform: translateY(3px);}
+body { background: url("images/background.png");}
+
+.main-footer { position: absolute;  right: 0; left: 0; bottom: 0}
+/* .github { width: 45%;} */
+.main-footer h5 a {color: #F6F6F6; text-decoration: underline;}
+.main-body p {font-size: 22px;font-family: 'Roboto', sans-serif; font-weight: 800; }
+
+/* Writing with cursor transition */
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+h3 { border-right: .1em solid #d3d3d3;
+    width: calc(0.55em * 23);
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-animation: typing 1s steps(14, end),
+    blink-caret .5s step-end infinite alternate;
+}
+
+.main-container { margin-top: 30px }
+
+/* DESKTOP DISPLAY */
+@media (min-width: 1200px) {
+
+  h1{font-size: 80px!important; padding-top: 20px}
+  h3,h5 { font-size: 45px;}
+  .github { width: 10%; margin-bottom: 15px}
+  .main-body p { font-size: 30px;}
+
+}
+.animated {
+  -webkit-animation-duration: 1.3s;
+  animation-duration: 1.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.fast {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
