@@ -33,13 +33,15 @@
 		    console.log(response.data);
 		    if(response.data == ''){
 		    }else{
-		    	document.getElementById('redi').innerHTML = "REDIRIGIENDO...."
+		    	alert("Redirigiendo...")
+		    	document.getElementById('redi').innerHTML = "REDIRIGIENDO....";
 				 redirect();
 
 		    }
 		});
 
 	}
+	alert("no funciona!")
 });
 
 
