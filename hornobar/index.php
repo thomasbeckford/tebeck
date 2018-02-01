@@ -15,20 +15,17 @@
 
 <body>
 
-<div id="fb-root"></div>
-<script src="https://connect.facebook.net/en_US/all.js">
-
-</script>
+ <div id="fb-root"></div>
+<script src="https://connect.facebook.net/en_US/all.js"> </script>
 
 <script>
 
-
-	FB.init({
+/*	FB.init({
 	appId :'245126446025547',
 			status : true,
 			cookie : true,
 			xfbml : true,
-	});
+	});*/
 
 	FB.getLoginStatus(function(response) {
 		if (response.status == "connected"){
@@ -39,7 +36,7 @@
 		    }else{
 		    	alert("Redirigiendo...")
 		    	document.getElementById('redi').innerHTML = "REDIRIGIENDO....";
-				 redirect();
+				//redirect();
 
 		    }
 		});
@@ -61,8 +58,8 @@
 function redirect(){
 
 	top.window.location = "https://www.google.com.ar/search?ei=6MFsWpDKJ8L-wQS306TwBQ&q=hornobar&oq=hornobar&gs_l=psy-ab.3..0i67k1j0i10k1j0i67k1j0j0i10k1j0i10i203k1l2j0j0i30k1l2.1052.1761.0.1837.8.8.0.0.0.0.152.704.4j3.7.0....0...1c.1.64.psy-ab..1.7.702...35i39k1j0i131k1j0i131i67k1j0i203k1.0.07HhwIqi1EM#lrd=0x95bcb1c96860a617:0x78666d8ff55c8a1f,1";
-
-}
+	}
+	
 </script>
 
 
