@@ -7,10 +7,7 @@
 	<meta http-equiv="expires" content="-1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 	<meta http-equiv="refresh" content="-1">
-	<script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -20,12 +17,12 @@
 
 <script>
 
-/*	FB.init({
+	FB.init({
 	appId :'245126446025547',
 			status : true,
 			cookie : true,
 			xfbml : true,
-	});*/
+	});
 
 	FB.getLoginStatus(function(response) {
 		if (response.status == "connected"){
