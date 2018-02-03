@@ -7,7 +7,7 @@
 	<meta http-equiv="pragma" content="no-cache" />
 	<meta http-equiv="expires" content="-1" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
-	
+
 </head>
 
 <body>
@@ -45,7 +45,7 @@ window.fbAsyncInit = function() {
        console.log("redirigiendo..");
       },
       error:function(){
-      console.log("error")..;
+      console.log("error");
        }   
     }); 
   });
