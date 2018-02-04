@@ -48,7 +48,7 @@
 		}
 		// getting basic user info
 		function getInfo() {
-			FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id, likes'}, function(response) {
+			FB.api('/me', 'GET', {fields: 'likes'}, function(response) {
 				document.getElementById('status').innerHTML = response.id;
 			});
 		}
@@ -65,8 +65,7 @@
 	</script>
 
 	<div id="status"></div>
-	<button onclick="uploadPhoto()">Upload Photo</button>
-	<button onclick="getInfo()">Get Info</button>
+	<button onclick="getInfo()" id="login">Soy fan ?</button>
 	<button onclick="login()" id="login">Login</button>
 </body>
 </html>
