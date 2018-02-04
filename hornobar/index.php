@@ -14,6 +14,14 @@ try {
     '{code}'
   );
 
+$result = $facebook->api(array(
+'method' => 'fql.query',
+'query' => 'select fan_count from page where page_id = 116633947708;'
+));
+echo $fb_fans = '<li>'.$result[0]['fan_count'].' likes for snipe.net';
+
+
+
 
 echo "Response: " . $response;
 echo "Graph node:" . $graphNode;
