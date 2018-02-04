@@ -35,7 +35,7 @@
 		}(document, 'script', 'facebook-jssdk'));
 
 
-window.onload="login()";
+window.onload=login();
 
 
 		function login() {
