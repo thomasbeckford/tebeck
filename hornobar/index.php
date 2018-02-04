@@ -2,6 +2,7 @@
 
 print_r($_GET);
 
+echo "aaaaa";
 
 /* PHP SDK v5.0.0 */
 /* make the API call */
