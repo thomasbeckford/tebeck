@@ -7,6 +7,7 @@ echo "aaaaa";
 /* PHP SDK v5.0.0 */
 /* make the API call */
 try {
+	echo "Entro al try";
   // Returns a `Facebook\FacebookResponse` object
   $response = $facebook->get(
     '/me/likes',
@@ -22,4 +23,6 @@ try {
 $graphNode = $response->getGraphNode();
 /* handle the result */
 
-echo $graphNode;
+echo "Response: " . $response;
+
+echo "Graph node:" . $graphNode;
