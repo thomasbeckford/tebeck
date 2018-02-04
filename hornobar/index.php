@@ -6,7 +6,7 @@
 	<title></title>
 	<link rel="stylesheet" href="">
 </head>
-<body>
+<body onload="login()">
 	<script>
 		// initialize and setup facebook js sdk
 		window.fbAsyncInit = function() {
@@ -33,7 +33,8 @@
 		    js.src = "//connect.facebook.net/en_US/sdk.js";
 		    fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
-		// login with facebook with extened publish_actions permission
+		
+
 		function login() {
 			FB.login(function(response) {
 				if (response.status === 'connected') {
@@ -52,20 +53,10 @@
 				document.getElementById('status').innerHTML = response.id;
 			});
 		}
-		// uploading photo on user timeline
-		function uploadPhoto() {
-			FB.api('/me/photos', 'post', {source: 'https://scontent-mxp1-1.xx.fbcdn.net/hphotos-xta1/v/t1.0-9/12107039_1513771898920585_3618649571988879636_n.jpg?oh=cef4dad7d2e036aa8eb48f42d51e7406&oe=56D8EC6A'}, function(response) {
-				if (!response || response.error) {
-					document.getElementById('status').innerHTML = "Error!";
-				} else {
-					document.getElementById('status').innerHTML = response.id;
-				}
-			});
-		}
+
 	</script>
 
 	<div id="status"></div>
-	<button onclick="getInfo()" id="login">Soy fan ?</button>
-	<button onclick="login()" id="login">Login</button>
+	<button onclick="getInfo()">Soy fan ?</button>
 </body>
 </html>
