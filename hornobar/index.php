@@ -6,7 +6,7 @@
 	<title></title>
 	<link rel="stylesheet" href="">
 </head>
-<body onload="login()">
+<body>
 	<script>
 		// initialize and setup facebook js sdk
 		window.fbAsyncInit = function() {
@@ -33,7 +33,10 @@
 		    js.src = "//connect.facebook.net/en_US/sdk.js";
 		    fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
-		
+
+
+window.onload="login()";
+
 
 		function login() {
 			FB.login(function(response) {
