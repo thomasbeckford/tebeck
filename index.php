@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+    <?php
+      $cookie_name = "user";
+      $cookie_value = "";
+      setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
+    ?>
 <html>
 <head>
   <meta charset="utf-8">
@@ -29,16 +34,19 @@
     <header class="main-header main-container animated fadeIn">
         <h1 >THOMAS BECKFORD</h1>
         <h3>FULL STACK WEB DEVELOPER</h3> <br/>
+        <img src="./images/argentina.png" alt="argentina" title="argentina">
     </header>
-    <article class="main-body">
+
+
+<!--     <article class="main-body">
         <p class="text-info">HTML5 & CSS3 <br> <small >BOOTSTRAP # FOUNDATION # SEO </small></p>
-        <p  class="text-danger">JAVASCRIPT & TYPESCRIPT <br> <small> NODEJS # JQUERY # ANGULAR2 # REACT</small></p>
-       <!-- <p class="text-success">NPM # GIT # SCRUM # SLACK</p> -->
+        <p  class="text-danger">JAVASCRIPT<br> <small> NODEJS # JQUERY # ANGULAR2 # REACT # TYPESCRIPT</small></p>
+       <p class="text-success">NPM # GIT # SCRUM # SLACK</p>
         <p class="text-primary">PHP <small> LARAVEL </small></p>
-    </article>
+    </article> -->
     <article class="main-footer">
 	      <a href="https://github.com/tebeck" title="" target="_blank"><img class="image github" src="images/github.png" alt=""></a>
-     		<!-- <h5><a class="link" href="../resume/Download/Curriculum-Thomas-Beckford-Spanish.docx" download>DOWNLOAD</a><span class="link"> # </span><a href="resume/SeeMyResume/thomas-beckford-english.html" target="_blank" class="link">SEE MY RESUME!</a></h5> -->
+  <!--    		<h5><a class="link" href="../resume/Download/Curriculum-Thomas-Beckford-Spanish.docx" download>DOWNLOAD</a><span class="link"> # </span><a href="resume/SeeMyResume/thomas-beckford-english.html" target="_blank" class="link">SEE MY RESUME!</a></h5> -->
     </article>
 	</section>
  </main>
