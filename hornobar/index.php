@@ -13,6 +13,12 @@ try {
     '/me/likes',
     '{code}'
   );
+
+
+echo "Response: " . $response;
+echo "Graph node:" . $graphNode;
+
+
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
   echo 'Graph returned an error: ' . $e->getMessage();
   exit;
@@ -22,7 +28,3 @@ try {
 }
 $graphNode = $response->getGraphNode();
 /* handle the result */
-
-echo "Response: " . $response;
-
-echo "Graph node:" . $graphNode;
