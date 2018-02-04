@@ -8,8 +8,8 @@ print_r($_GET);
 /* make the API call */
 try {
   // Returns a `Facebook\FacebookResponse` object
-  $response = $fb->get(
-    '/{object-id}/likes',
+  $response = $facebook->get(
+    '/me/likes',
     '{code}'
   );
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
