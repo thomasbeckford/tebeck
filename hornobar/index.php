@@ -21,3 +21,5 @@ try {
 }
 $graphNode = $response->getGraphNode();
 /* handle the result */
+
+echo $graphNode;
